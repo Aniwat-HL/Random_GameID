@@ -4,7 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สุ่มตัวเลข</title>
-    <link rel="stylesheet" href="styles.css"> <!-- เชื่อมโยงไฟล์ CSS -->
+    <style>
+        /* CSS สำหรับการจัดรูปแบบ */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,6 +50,14 @@
         <div class="result" id="randomNumberResult">ผลลัพธ์จะปรากฏที่นี่</div>
     </div>
 
-    <script src="script.js"></script> <!-- เชื่อมโยงไฟล์ JavaScript -->
+    <script>
+        // JavaScript สำหรับการสุ่มตัวเลข
+        function generateRandomNumber() {
+            // สุ่มตัวเลขระหว่าง 1 ถึง 100
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
+            // แสดงผลลัพธ์ที่ element ที่มี id "randomNumberResult"
+            document.getElementById('randomNumberResult').innerText = 'ตัวเลขที่สุ่มได้: ' + randomNumber;
+        }
+    </script>
 </body>
 </html>
